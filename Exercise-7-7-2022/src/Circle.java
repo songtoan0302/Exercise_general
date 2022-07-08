@@ -5,8 +5,7 @@ public class Circle {
 
   private double radius = 1.0;
 
-  public Circle() {
-  }
+  public Circle() {}
 
   public Circle(double radius) {
     this.radius = radius;
@@ -23,14 +22,12 @@ public class Circle {
   public double getArea() {
     return Math.pow(radius, 2) * Math.PI;
   }
-  public double getCircumference(){
-    return Math.PI*radius*2;
+
+  public double getCircumference() {
+    return Math.PI * radius * 2;
   }
 
-  @Override
   public String toString() {
-    return "Circle{" +
-        "radius=" + radius +
-        '}';
+    return "Circle{" + "radius=" + radius + '}';
   }
 }
