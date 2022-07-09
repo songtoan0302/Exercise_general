@@ -1,5 +1,4 @@
-package oop;
-
+package oop.model;
 
 public class Bicycle extends Vehicle {
 
@@ -11,8 +10,4 @@ public class Bicycle extends Vehicle {
     super(name, typeVehicle, engine, wheel);
   }
 
-  @Override
-  public void run() {
-    System.out.println("xe đap chay bằng sức người đạp");
-  }
 }

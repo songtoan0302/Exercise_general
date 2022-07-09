@@ -1,6 +1,9 @@
-import oop.Bicycle;
-import oop.Car;
-import oop.Vehicle;
+import oop.model.Bicycle;
+import oop.model.Car;
+import oop.model.Vehicle;
+import oop.service.RunService;
+import oop.service.impl.BicycleService;
+import oop.service.impl.CarService;
 
 public class MainApplication {
 
@@ -11,12 +14,14 @@ public class MainApplication {
     Bicycle bicycle = new Bicycle("Thong nhat", "t", false, 2);
 
     System.out.println(vehicle1.toString());
-    vehicle1.run();
     System.out.println(vehicle2.toString());
-    vehicle2.run();
     System.out.println(car.toString());
-    car.run();
     System.out.println(bicycle.toString());
-    bicycle.run();
+
+    RunService runService1=new CarService();
+    runService1.run();
+    RunService runService2=new BicycleService();
+    runService2.run();
   }
+
 }

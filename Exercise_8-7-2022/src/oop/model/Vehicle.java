@@ -1,4 +1,4 @@
-package oop;
+package oop.model;
 
 public abstract class Vehicle {
   private String name;
@@ -14,8 +14,6 @@ public abstract class Vehicle {
     this.engine = engine;
     this.wheel = wheel;
   }
-
-  public abstract void run();
 
   public String getName() {
     return name;
@@ -51,11 +49,17 @@ public abstract class Vehicle {
 
   @Override
   public String toString() {
-    return "Vehicle{" +
-        "name='" + name + '\'' +
-        ", typeVehicle='" + typeVehicle + '\'' +
-        ", engine=" + engine +
-        ", wheel=" + wheel +
-        '}';
+    return "Vehicle{"
+        + "name='"
+        + name
+        + '\''
+        + ", typeVehicle='"
+        + typeVehicle
+        + '\''
+        + ", engine="
+        + engine
+        + ", wheel="
+        + wheel
+        + '}';
   }
 }
