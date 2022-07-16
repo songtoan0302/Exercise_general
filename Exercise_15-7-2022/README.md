@@ -1,0 +1,12 @@
+#Collection List
+- List là một collection, có thể lưu các giá trị trùng lặp
+- List bao gồm các thao tác sau:
+  - Positional access:(truy cập vị trí)  bao gồm các hành động như get,set,add,addAll,remove
+  - Search: Tìm kiếm một đối tượng được chỉ định trong danh sách và trả về vị trí số của nó. Phương pháp tìm kiếm bao gồm Indexof và Lastindexof.
+  - Iteration :áp dụng lặp cho list. Phương thức cung cấp hành vi:listIterator 
+  - Range-view: phạm vi xem được cung cấp qua phương thức sublist 
+- List là 1 interface và có 2 triển khai là ArrayList và LinkedList
+  - ArrayList là 1 triển khai của List . Nó là một danh sách các phần tử và có thứ tự. Các phần tử của array list được lưu trữ trong các ô nhớ liền kề nhau.Vì vậy khi thêm hoặc xóa các phần tử trong array list thì sẽ có quá trình dịch bit để đảm bảo được điều kiện các ô nhớ liền kề nhau
+  - LinkedList cũng là một triển khai của List. Nó khác array list ở chỗ các các phần tử của LinkedList không cần lưu ở các ô nhớ liền kề nhau. Và để đảm bảo được vị trí của các phần tử được duy trì một cách có thứ tự thì có thêm 1 mảng để chứa các thông tin như: Vị trí ô nhớ của phần tử trước và vị trí ô nhớ của phần tử sau. 
+  - Sự khác biệt của linked list và array list là do cách bố trí bộ nhớ khác nhau nên linked list sẽ có hiệu suất cao hơn cho các thao tác thêm và xóa phần tử trong List, còn get phần tử trong list thì array list có hiệu xuất vượt trội hơn linked list
+- Vậy thì ta sẽ đặt ra một câu hỏi: List là 1 danh sách các phần tử có thứ tự. Vậy nó khác gì so với mảng array trong java? Và khi nào thì nên dùng array và khi nào nên dùng list?
