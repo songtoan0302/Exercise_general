@@ -1,4 +1,4 @@
-package prime;
+package org.aibles.exercies.prime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,17 +9,18 @@ import java.util.List;
 public class Prime {
 
   private static final int PRIME_MIN = 2;
+  private static final int DEFAULT_REMAINDER_OF_DIVISIBILITY = 0;
 
-  public static List analysisInteger(int integer) {
+  public static List<Integer> analysisInteger(int integer) {
 
-    List list = new ArrayList();
+    List<Integer> listPrime = new ArrayList();
     for (int i = 2; i <= integer; i++) {
-      while (checkPrime(i) && (integer % i == 0)) {
-        list.add(i);
+      while (checkPrime(i) && (integer % i == DEFAULT_REMAINDER_OF_DIVISIBILITY)) {
+        listPrime.add(i);
         integer /= i;
       }
     }
-    return list;
+    return listPrime;
   }
 
   private static boolean checkPrime(int checkNumber) {
@@ -27,7 +28,7 @@ public class Prime {
       return true;
     } else {
       for (int i = 2; i <= Math.sqrt(checkNumber); i++) {
-        if (checkNumber % i == 0) { // check number chia hết cho i
+        if (checkNumber % i == DEFAULT_REMAINDER_OF_DIVISIBILITY) { // khi number chia hết cho i số dư sẽ bằng 0
           return false;
         }
       }

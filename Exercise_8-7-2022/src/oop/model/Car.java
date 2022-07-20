@@ -1,7 +1,5 @@
 package oop.model;
 
-import oop.model.Vehicle;
-
 public class Car extends Vehicle {
 
   public Car() {

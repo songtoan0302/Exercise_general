@@ -1,6 +1,6 @@
-import binary.BinaryString;
-import prime.Prime;
-import prime.PrimeFiveNumber;
+import org.aibles.exercies.binary.BinaryString;
+import org.aibles.exercies.prime.Prime;
+import org.aibles.exercies.prime.PrimeFiveNumber;
 
 /**
  * @author ToanNS
@@ -8,7 +8,7 @@ import prime.PrimeFiveNumber;
 public class MainApplication {
   public static void main(String[] args) {
     int sum = 37;
-    System.out.println("Số nguyên tố có tổng là "+sum+" là :\n"+PrimeFiveNumber.checkSumOfDigits(sum));
+    System.out.println("Số nguyên tố có tổng là "+sum+" là :\n"+PrimeFiveNumber.processRangeNumber(sum));
 
     int integer=16;
     System.out.println("Dãy số nguyên tố được phân tích từ "+integer+" : \n"+Prime.analysisInteger(16));

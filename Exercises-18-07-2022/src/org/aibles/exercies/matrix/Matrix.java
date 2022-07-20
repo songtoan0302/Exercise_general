@@ -1,4 +1,4 @@
-package matrix;
+package org.aibles.exercies.matrix;
 
 /**
  * @author ToanNS
