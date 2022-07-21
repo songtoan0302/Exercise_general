@@ -7,8 +7,10 @@ import java.util.List;
  * @author ToanNS
  */
 public class BinaryString {
-    private static final int DEFAULT_MULTIPLIED=1;
-    private static final int DEFAULT_INDEX_MIN=0;
+  private static final int DEFAULT_MULTIPLIED = 1;
+  private static final int DEFAULT_INDEX_MIN = 0;
+  private static final int BINARY_FIRST_NUMBER = 0;
+  private static final int BINARY_SECOND_NUMBER = 1;
 
   public static List<String> processBinary(int lengthBinary) {
     int[] array = new int[lengthBinary];
@@ -23,16 +25,16 @@ public class BinaryString {
       }
       listBinary.add(stringBinary);
       stringBinary = "";
-      int i = lengthBinary - 1;
+      int indexMax = lengthBinary - 1; // chỉ số lớn nhất bằng chiều dài mảng -1
       do {
-        if (array[i] == 0) {
-          array[i] = 1;//0  1 là chỉ số
-          for (int j = lengthBinary - 1; j > i; j--) {
-            array[j] = 0;
+        if (array[indexMax] == BINARY_FIRST_NUMBER) {
+          array[indexMax] = BINARY_SECOND_NUMBER; // 0  1 là 2 số của dãy nhị phân
+          for (int j = lengthBinary - 1; j > indexMax; j--) {
+            array[j] = BINARY_FIRST_NUMBER;
           }
           break;
-        } else i--;
-      } while (i >= DEFAULT_INDEX_MIN);
+        } else indexMax--;
+      } while (indexMax >= DEFAULT_INDEX_MIN);
     } while (multiplied != DEFAULT_MULTIPLIED);
     return listBinary;
   }

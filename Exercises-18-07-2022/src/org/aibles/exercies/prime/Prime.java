@@ -28,7 +28,8 @@ public class Prime {
       return true;
     } else {
       for (int i = 2; i <= Math.sqrt(checkNumber); i++) {
-        if (checkNumber % i == DEFAULT_REMAINDER_OF_DIVISIBILITY) { // khi number chia hết cho i số dư sẽ bằng 0
+        if (checkNumber % i
+            == DEFAULT_REMAINDER_OF_DIVISIBILITY) { // khi number chia hết cho i số dư sẽ bằng 0
           return false;
         }
       }
